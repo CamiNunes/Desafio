@@ -1,0 +1,15 @@
+E:\Desafios\Desafio\crud-clientes.Infra\bin\Debug\net6.0\crud-clientes.Infra.deps.json
+E:\Desafios\Desafio\crud-clientes.Infra\bin\Debug\net6.0\crud-clientes.Infra.dll
+E:\Desafios\Desafio\crud-clientes.Infra\bin\Debug\net6.0\crud-clientes.Infra.pdb
+E:\Desafios\Desafio\crud-clientes.Infra\bin\Debug\net6.0\crud-clientes.Domain.dll
+E:\Desafios\Desafio\crud-clientes.Infra\bin\Debug\net6.0\crud-clientes.Domain.pdb
+E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\crud-clientes.Infra.csproj.AssemblyReference.cache
+E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\crud-clientes.Infra.GeneratedMSBuildEditorConfig.editorconfig
+E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\crud-clientes.Infra.AssemblyInfoInputs.cache
+E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\crud-clientes.Infra.AssemblyInfo.cs
+E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\crud-clientes.Infra.csproj.CoreCompileInputs.cache
+E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\crud-clientes.Infra.csproj.CopyComplete
+E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\crud-clientes.Infra.dll
+E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\refint\crud-clientes.Infra.dll
+E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\crud-clientes.Infra.pdb
+E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\ref\crud-clientes.Infra.dll

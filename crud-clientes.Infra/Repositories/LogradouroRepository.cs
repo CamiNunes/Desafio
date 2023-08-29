@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace crud_clientes.Infra.Repositories
 {
-    internal class LogradouroRepository : ILogradouroRepository
+    public class LogradouroRepository : ILogradouroRepository
     {
         public Task AtualizarAsync(Logradouro logradouro)
         {

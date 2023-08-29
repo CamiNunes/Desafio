@@ -1,0 +1,15 @@
+E:\Desafios\Desafio\crud-clientes.Application\bin\Debug\net6.0\crud-clientes.Application.deps.json
+E:\Desafios\Desafio\crud-clientes.Application\bin\Debug\net6.0\crud-clientes.Application.dll
+E:\Desafios\Desafio\crud-clientes.Application\bin\Debug\net6.0\crud-clientes.Application.pdb
+E:\Desafios\Desafio\crud-clientes.Application\bin\Debug\net6.0\crud-clientes.Domain.dll
+E:\Desafios\Desafio\crud-clientes.Application\bin\Debug\net6.0\crud-clientes.Domain.pdb
+E:\Desafios\Desafio\crud-clientes.Application\obj\Debug\net6.0\crud-clientes.Application.csproj.AssemblyReference.cache
+E:\Desafios\Desafio\crud-clientes.Application\obj\Debug\net6.0\crud-clientes.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\Desafios\Desafio\crud-clientes.Application\obj\Debug\net6.0\crud-clientes.Application.AssemblyInfoInputs.cache
+E:\Desafios\Desafio\crud-clientes.Application\obj\Debug\net6.0\crud-clientes.Application.AssemblyInfo.cs
+E:\Desafios\Desafio\crud-clientes.Application\obj\Debug\net6.0\crud-clientes.Application.csproj.CoreCompileInputs.cache
+E:\Desafios\Desafio\crud-clientes.Application\obj\Debug\net6.0\crud-clientes.Application.csproj.CopyComplete
+E:\Desafios\Desafio\crud-clientes.Application\obj\Debug\net6.0\crud-clientes.Application.dll
+E:\Desafios\Desafio\crud-clientes.Application\obj\Debug\net6.0\refint\crud-clientes.Application.dll
+E:\Desafios\Desafio\crud-clientes.Application\obj\Debug\net6.0\crud-clientes.Application.pdb
+E:\Desafios\Desafio\crud-clientes.Application\obj\Debug\net6.0\ref\crud-clientes.Application.dll

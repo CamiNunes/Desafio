@@ -8,7 +8,10 @@
     ".NETCoreApp,Version=v6.0": {
       "curd-clientes.API/1.0.0": {
         "dependencies": {
-          "Swashbuckle.AspNetCore": "6.5.0"
+          "Swashbuckle.AspNetCore": "6.5.0",
+          "crud-clientes.Application": "1.0.0",
+          "crud-clientes.Domain": "1.0.0",
+          "crud-clientes.Infra": "1.0.0"
         },
         "runtime": {
           "curd-clientes.API.dll": {}
@@ -60,6 +63,27 @@
             "fileVersion": "6.5.0.0"
           }
         }
+      },
+      "crud-clientes.Application/1.0.0": {
+        "dependencies": {
+          "crud-clientes.Domain": "1.0.0"
+        },
+        "runtime": {
+          "crud-clientes.Application.dll": {}
+        }
+      },
+      "crud-clientes.Domain/1.0.0": {
+        "runtime": {
+          "crud-clientes.Domain.dll": {}
+        }
+      },
+      "crud-clientes.Infra/1.0.0": {
+        "dependencies": {
+          "crud-clientes.Domain": "1.0.0"
+        },
+        "runtime": {
+          "crud-clientes.Infra.dll": {}
+        }
       }
     }
   },
@@ -110,6 +134,21 @@
       "sha512": "sha512-OvbvxX+wL8skxTBttcBsVxdh73Fag4xwqEU2edh4JMn7Ws/xJHnY/JB1e9RoCb6XpDxUF3hD9A0Z1lEUx40Pfw==",
       "path": "swashbuckle.aspnetcore.swaggerui/6.5.0",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    },
+    "crud-clientes.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "crud-clientes.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "crud-clientes.Infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
