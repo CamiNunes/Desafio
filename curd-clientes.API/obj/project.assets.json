@@ -88,6 +88,42 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "crud-clientes.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "crud-clientes.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/crud-clientes.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/crud-clientes.Application.dll": {}
+        }
+      },
+      "crud-clientes.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/crud-clientes.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/crud-clientes.Domain.dll": {}
+        }
+      },
+      "crud-clientes.Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "crud-clientes.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/crud-clientes.Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/crud-clientes.Infra.dll": {}
+        }
       }
     }
   },
@@ -429,11 +465,29 @@
         "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "crud-clientes.Application/1.0.0": {
+      "type": "project",
+      "path": "../crud-clientes.Application/crud-clientes.Application.csproj",
+      "msbuildProject": "../crud-clientes.Application/crud-clientes.Application.csproj"
+    },
+    "crud-clientes.Domain/1.0.0": {
+      "type": "project",
+      "path": "../crud-clientes.Domain/crud-clientes.Domain.csproj",
+      "msbuildProject": "../crud-clientes.Domain/crud-clientes.Domain.csproj"
+    },
+    "crud-clientes.Infra/1.0.0": {
+      "type": "project",
+      "path": "../crud-clientes.Infra/crud-clientes.Infra.csproj",
+      "msbuildProject": "../crud-clientes.Infra/crud-clientes.Infra.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Swashbuckle.AspNetCore >= 6.5.0"
+      "Swashbuckle.AspNetCore >= 6.5.0",
+      "crud-clientes.Application >= 1.0.0",
+      "crud-clientes.Domain >= 1.0.0",
+      "crud-clientes.Infra >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -463,7 +517,17 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Desafios\\Desafio\\crud-clientes.Application\\crud-clientes.Application.csproj": {
+              "projectPath": "E:\\Desafios\\Desafio\\crud-clientes.Application\\crud-clientes.Application.csproj"
+            },
+            "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj": {
+              "projectPath": "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj"
+            },
+            "E:\\Desafios\\Desafio\\crud-clientes.Infra\\crud-clientes.Infra.csproj": {
+              "projectPath": "E:\\Desafios\\Desafio\\crud-clientes.Infra\\crud-clientes.Infra.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

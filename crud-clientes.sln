@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Infra", "3-Infra", "{5BCE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Application", "4-Application", "{B3DF8E9B-A95B-4635-8D4D-025629F59F3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "curd-clientes.API", "curd-clientes.API\curd-clientes.API.csproj", "{2B29BF41-86FE-4DB9-A80C-F4F0242D5FD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "curd-clientes.API", "curd-clientes.API\curd-clientes.API.csproj", "{2B29BF41-86FE-4DB9-A80C-F4F0242D5FD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crud-clientes.Domain", "crud-clientes.Domain\crud-clientes.Domain.csproj", "{EF6B6EFE-E06D-4E3F-B770-555C664CE3E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "crud-clientes.Domain", "crud-clientes.Domain\crud-clientes.Domain.csproj", "{EF6B6EFE-E06D-4E3F-B770-555C664CE3E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crud-clientes.Infra", "crud-clientes.Infra\crud-clientes.Infra.csproj", "{CFA5B821-2EB8-4234-8B8C-C2D5B981825A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "crud-clientes.Infra", "crud-clientes.Infra\crud-clientes.Infra.csproj", "{CFA5B821-2EB8-4234-8B8C-C2D5B981825A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crud-clientes.Application", "crud-clientes.Application\crud-clientes.Application.csproj", "{5F86A944-4E60-4779-9F5E-738DF82D1FF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "crud-clientes.Application", "crud-clientes.Application\crud-clientes.Application.csproj", "{5F86A944-4E60-4779-9F5E-738DF82D1FF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

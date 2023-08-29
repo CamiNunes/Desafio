@@ -4,6 +4,179 @@
     "E:\\Desafios\\Desafio\\curd-clientes.API\\curd-clientes.API.csproj": {}
   },
   "projects": {
+    "E:\\Desafios\\Desafio\\crud-clientes.Application\\crud-clientes.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Desafios\\Desafio\\crud-clientes.Application\\crud-clientes.Application.csproj",
+        "projectName": "crud-clientes.Application",
+        "projectPath": "E:\\Desafios\\Desafio\\crud-clientes.Application\\crud-clientes.Application.csproj",
+        "packagesPath": "C:\\Users\\Usuário\\.nuget\\packages\\",
+        "outputPath": "E:\\Desafios\\Desafio\\crud-clientes.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Usuário\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj": {
+                "projectPath": "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj",
+        "projectName": "crud-clientes.Domain",
+        "projectPath": "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj",
+        "packagesPath": "C:\\Users\\Usuário\\.nuget\\packages\\",
+        "outputPath": "E:\\Desafios\\Desafio\\crud-clientes.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Usuário\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Desafios\\Desafio\\crud-clientes.Infra\\crud-clientes.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Desafios\\Desafio\\crud-clientes.Infra\\crud-clientes.Infra.csproj",
+        "projectName": "crud-clientes.Infra",
+        "projectPath": "E:\\Desafios\\Desafio\\crud-clientes.Infra\\crud-clientes.Infra.csproj",
+        "packagesPath": "C:\\Users\\Usuário\\.nuget\\packages\\",
+        "outputPath": "E:\\Desafios\\Desafio\\crud-clientes.Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Usuário\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj": {
+                "projectPath": "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\Desafios\\Desafio\\curd-clientes.API\\curd-clientes.API.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -28,7 +201,17 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\Desafios\\Desafio\\crud-clientes.Application\\crud-clientes.Application.csproj": {
+                "projectPath": "E:\\Desafios\\Desafio\\crud-clientes.Application\\crud-clientes.Application.csproj"
+              },
+              "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj": {
+                "projectPath": "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj"
+              },
+              "E:\\Desafios\\Desafio\\crud-clientes.Infra\\crud-clientes.Infra.csproj": {
+                "projectPath": "E:\\Desafios\\Desafio\\crud-clientes.Infra\\crud-clientes.Infra.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

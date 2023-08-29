@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\crud-clientes.Domain\crud-clientes.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "crud-clientes.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/crud-clientes.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/crud-clientes.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "crud-clientes.Domain/1.0.0": {
+      "type": "project",
+      "path": "../crud-clientes.Domain/crud-clientes.Domain.csproj",
+      "msbuildProject": "../crud-clientes.Domain/crud-clientes.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "crud-clientes.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Usuário\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj": {
+              "projectPath": "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

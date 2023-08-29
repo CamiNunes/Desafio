@@ -15,4 +15,10 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\crud-clientes.Application\crud-clientes.Application.csproj" />
+    <ProjectReference Include="..\crud-clientes.Domain\crud-clientes.Domain.csproj" />
+    <ProjectReference Include="..\crud-clientes.Infra\crud-clientes.Infra.csproj" />
+  </ItemGroup>
+
 </Project>
