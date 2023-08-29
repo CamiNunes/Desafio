@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "yY/k5qKYqm/iT2xkInWDG1NcBFd0uJ/lcQlvAPELTfk70lMo2vOTnfldANYWE80dA8FvZTebL1Cyr+kuUMi2dQ==",
+  "dgSpecHash": "MUbeP6m+BFPk1P8cnLR85REag+LvfEAMFcBaNcgcyH9BmPUvXXZ9dWUpiNYzonHV0oUsHcNeNbUs13+s83/cOQ==",
   "success": true,
   "projectFilePath": "E:\\Desafios\\Desafio\\crud-clientes.Domain\\crud-clientes.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuário\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512"
+  ],
   "logs": []
 }

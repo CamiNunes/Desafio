@@ -8,7 +8,7 @@ namespace crud_clientes.Domain.Entities
 {
     public class Logradouro
     {
-        public Guid Codigo { get; set; }
+        public Guid LogradourId { get; set; }
         public int ClienteId { get; set; }
         public string Tipo { get; set; }
         public string Endereco { get; set; }

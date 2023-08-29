@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dapper.Contrib.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,9 @@ namespace crud_clientes.Domain.Entities
         public Guid ClienteId { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
-        public IEnumerable<Logradouro> Logradouros { get; set; }
+        public byte[] Logotipo { get; set; }
+
+        [Write(false)]
+        public List<Logradouro> Logradouros { get; set; }
     }
 }

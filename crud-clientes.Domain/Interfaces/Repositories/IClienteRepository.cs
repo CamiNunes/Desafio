@@ -10,6 +10,7 @@ namespace crud_clientes.Domain.Interfaces.Repositories
     public interface IClienteRepository
     {
         Task<IEnumerable<Cliente>> ObterTodosAsync();
+        Task<Cliente> GetClienteByEmail(string email);
         Task<Cliente> ObterPorIdAsync(Guid id);
         Task InserirAsync(Cliente cliente);
         Task AtualizarAsync(Cliente cliente);

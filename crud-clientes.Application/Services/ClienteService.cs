@@ -23,9 +23,16 @@ namespace crud_clientes.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task CriarCliente(Cliente cliente)
+        public async Task CriarCliente(Cliente cliente)
         {
-            throw new NotImplementedException();
+            var existingCliente = _clienteRepository.GetClienteByEmail(cliente.Email);
+
+            if (existingCliente != null)
+            {
+                throw new Exception("Um cliente com este endereço de e-mail já está registrado.");
+            }
+
+            await _clienteRepository.InserirAsync(cliente);
         }
 
         public Task DeletarCliente(Guid id)
