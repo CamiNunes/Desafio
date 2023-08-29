@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\curd-clientes.API.props" />
+</Project>
