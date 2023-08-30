@@ -18,29 +18,29 @@ namespace crud_clientes.Application.Services
             _logradouroRepository = logradouroRepository;
         }
 
-        public Task AtualizarLogradouro(Logradouro Logradouro)
+        public async Task<IEnumerable<Logradouro>> ObterTodosLogradouros()
         {
-            throw new NotImplementedException();
+            return await _logradouroRepository.ObterTodosAsync();
         }
 
-        public Task CriarLogradouro(Logradouro Logradouro)
+        public async Task<Logradouro> ObterLogradouroPorId(Guid id)
         {
-            throw new NotImplementedException();
+            return await _logradouroRepository.ObterPorIdAsync(id);
         }
 
-        public Task DeletarLogradouro(Guid id)
+        public async Task AtualizarLogradouro(Logradouro Logradouro)
         {
-            throw new NotImplementedException();
+            await _logradouroRepository.AtualizarAsync(Logradouro);
         }
 
-        public Task<Logradouro> ObterLogradouroPorId(Guid id)
+        public async Task CriarLogradouro(Logradouro Logradouro)
         {
-            throw new NotImplementedException();
+            await _logradouroRepository.InserirAsync(Logradouro);
         }
 
-        public Task<IEnumerable<Logradouro>> ObterTodosLogradouros()
+        public async Task DeletarLogradouro(Guid id, Guid logradouroId)
         {
-            throw new NotImplementedException();
+            await _logradouroRepository.ExcluirAsync(id, logradouroId);
         }
     }
 }

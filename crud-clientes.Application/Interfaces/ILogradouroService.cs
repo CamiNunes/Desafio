@@ -13,6 +13,6 @@ namespace crud_clientes.Application.Interfaces
         Task<Logradouro> ObterLogradouroPorId(Guid id);
         Task CriarLogradouro(Logradouro Logradouro);
         Task AtualizarLogradouro(Logradouro Logradouro);
-        Task DeletarLogradouro(Guid id);
+        Task DeletarLogradouro(Guid id, Guid logradouroId);
     }
 }

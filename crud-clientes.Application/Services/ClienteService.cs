@@ -18,9 +18,14 @@ namespace crud_clientes.Application.Services
             _clienteRepository = clienteRepository;
         }
 
-        public Task AtualizarCliente(Cliente cliente)
+        public async Task<IEnumerable<Cliente>> ObterTodosClientes()
         {
-            throw new NotImplementedException();
+            return await _clienteRepository.ObterTodosAsync();
+        }
+
+        public async Task<Cliente> ObterClientePorId(Guid id)
+        {
+            return await _clienteRepository.ObterPorIdAsync(id);
         }
 
         public async Task CriarCliente(Cliente cliente)
@@ -35,19 +40,15 @@ namespace crud_clientes.Application.Services
             await _clienteRepository.InserirAsync(cliente);
         }
 
+        public async Task AtualizarCliente(Cliente cliente)
+        {
+            await _clienteRepository.AtualizarAsync(cliente);
+        }
+
         public async Task DeletarCliente(Guid id)
         {
             await _clienteRepository.ExcluirAsync(id);
         }
 
-        public Task<Cliente> ObterClientePorId(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Cliente>> ObterTodosClientes()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

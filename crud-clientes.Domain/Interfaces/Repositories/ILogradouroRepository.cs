@@ -13,6 +13,6 @@ namespace crud_clientes.Domain.Interfaces.Repositories
         Task<Logradouro> ObterPorIdAsync(Guid id);
         Task InserirAsync(Logradouro logradouro);
         Task AtualizarAsync(Logradouro logradouro);
-        Task ExcluirAsync(Guid id);
+        Task ExcluirAsync(Guid id, Guid logradouroId);
     }
 }
