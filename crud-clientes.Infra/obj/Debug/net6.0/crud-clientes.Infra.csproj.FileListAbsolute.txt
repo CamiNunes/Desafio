@@ -13,3 +13,5 @@ E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\crud-clientes.Infra.dll
 E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\refint\crud-clientes.Infra.dll
 E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\crud-clientes.Infra.pdb
 E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\ref\crud-clientes.Infra.dll
+E:\Desafios\Desafio\crud-clientes.Infra\bin\Debug\net6.0\crud-clientes.Infra.runtimeconfig.json
+E:\Desafios\Desafio\crud-clientes.Infra\obj\Debug\net6.0\crud-clientes.Infra.genruntimeconfig.cache

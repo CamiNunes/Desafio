@@ -22,43 +22,83 @@ namespace crud_clientes.Infra.Repositories
             _connection = configuration.GetConnectionString("DefaultConnection");
         }
 
-        public Task AtualizarAsync(Cliente cliente)
+        public async Task<IEnumerable<Cliente>> ObterTodosAsync()
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new SqlConnection(_connection))
+            {
+                return connection.Query<Cliente>("SELECT ClienteID, Nome, Email, Logotipo FROM clientes");
+            }
         }
 
-        public Task ExcluirAsync(Guid id)
+        public async Task<Cliente> ObterPorIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new SqlConnection(_connection))
+            {
+                return connection.QueryFirstOrDefault<Cliente>("SELECT * FROM clientes WHERE ClienteId = @Id", new { Id = id });
+            }
+        }
+
+        public async Task<Cliente> GetClienteByEmail(string email)
+        {
+            using (IDbConnection connection = new SqlConnection(_connection))
+            {
+                const string sql = "SELECT * FROM Clientes WHERE Email = @Email";
+                return connection.QueryFirstOrDefault<Cliente>(sql, new { Email = email });
+            }
         }
 
         public async Task InserirAsync(Cliente cliente)
         {
             using (IDbConnection connection = new SqlConnection(_connection))
             {
-                var clienteFormatado = new Cliente()
+                try
                 {
-                    Nome = cliente.Nome,
-                    Email = cliente.Email
-                };
+                    var clienteFormatado = new Cliente()
+                    {
+                        Nome = cliente.Nome,
+                        Email = cliente.Email,
+                        Logotipo = cliente.Logotipo,
+                    };
 
-                await connection.ExecuteAsync("InsertCliente", clienteFormatado, commandType: CommandType.StoredProcedure);
+                    await connection.ExecuteAsync("InsertCliente", clienteFormatado, commandType: CommandType.StoredProcedure);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+
             }
         }
 
-        public Task<Cliente> ObterPorIdAsync(Guid id)
+        public async Task AtualizarAsync(Cliente cliente)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new SqlConnection(_connection))
+            {
+                var clienteFormatado = new Cliente()
+                {
+                    ClienteId = cliente.ClienteId,
+                    Nome = cliente.Nome,
+                    Email = cliente.Email,
+                    Logotipo = cliente.Logotipo,
+                };
+
+                await connection.ExecuteAsync("UpdateCliente", clienteFormatado, commandType: CommandType.StoredProcedure);
+            }
         }
 
-        public Task<IEnumerable<Cliente>> ObterTodosAsync()
+        public async Task ExcluirAsync(Guid id)
         {
-            throw new NotImplementedException();
-        }
-
-        Task<Cliente> IClienteRepository.GetClienteByEmail(string email)
-        {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new SqlConnection(_connection))
+            {
+                try
+                {
+                    await connection.ExecuteAsync("DeleteClienteELogradouros", new { ClienteId = id }, commandType: CommandType.StoredProcedure);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
         }
     }
 }

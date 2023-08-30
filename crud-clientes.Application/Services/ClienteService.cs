@@ -27,7 +27,7 @@ namespace crud_clientes.Application.Services
         {
             var existingCliente = _clienteRepository.GetClienteByEmail(cliente.Email);
 
-            if (existingCliente != null)
+            if (existingCliente.Result != null)
             {
                 throw new Exception("Um cliente com este endereço de e-mail já está registrado.");
             }
@@ -35,9 +35,9 @@ namespace crud_clientes.Application.Services
             await _clienteRepository.InserirAsync(cliente);
         }
 
-        public Task DeletarCliente(Guid id)
+        public async Task DeletarCliente(Guid id)
         {
-            throw new NotImplementedException();
+            await _clienteRepository.ExcluirAsync(id);
         }
 
         public Task<Cliente> ObterClientePorId(Guid id)

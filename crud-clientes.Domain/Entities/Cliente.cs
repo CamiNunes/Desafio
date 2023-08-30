@@ -12,9 +12,9 @@ namespace crud_clientes.Domain.Entities
         public Guid ClienteId { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
-        public byte[] Logotipo { get; set; }
+        public string Logotipo { get; set; }
 
-        [Write(false)]
-        public List<Logradouro> Logradouros { get; set; }
+        //[Write(false)]
+        //public List<Logradouro> Logradouros { get; set; }
     }
 }
