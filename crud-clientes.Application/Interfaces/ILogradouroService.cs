@@ -9,8 +9,8 @@ namespace crud_clientes.Application.Interfaces
 {
     public interface ILogradouroService
     {
-        Task<IEnumerable<Logradouro>> ObterTodosLogradouros();
-        Task<Logradouro> ObterLogradouroPorId(Guid id);
+        Task<IEnumerable<Logradouro>> ObterTodosLogradouros(Guid id);
+        Task<Logradouro> ObterLogradouroPorId(Guid id, Guid logradouroId);
         Task CriarLogradouro(Logradouro Logradouro);
         Task AtualizarLogradouro(Logradouro Logradouro);
         Task DeletarLogradouro(Guid id, Guid logradouroId);

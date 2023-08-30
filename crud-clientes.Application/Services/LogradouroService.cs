@@ -18,14 +18,14 @@ namespace crud_clientes.Application.Services
             _logradouroRepository = logradouroRepository;
         }
 
-        public async Task<IEnumerable<Logradouro>> ObterTodosLogradouros()
+        public async Task<IEnumerable<Logradouro>> ObterTodosLogradouros(Guid id)
         {
-            return await _logradouroRepository.ObterTodosAsync();
+            return await _logradouroRepository.ObterTodosLogradourosAsync(id);
         }
 
-        public async Task<Logradouro> ObterLogradouroPorId(Guid id)
+        public async Task<Logradouro> ObterLogradouroPorId(Guid id, Guid logradouroId)
         {
-            return await _logradouroRepository.ObterPorIdAsync(id);
+            return await _logradouroRepository.ObterPorIdAsync(id, logradouroId);
         }
 
         public async Task AtualizarLogradouro(Logradouro Logradouro)

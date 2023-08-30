@@ -67,7 +67,6 @@ namespace curd_clientes.API.Controllers
         {
             try
             {
-                cliente.ClienteId = id;
                 _clienteService.AtualizarCliente(cliente);
                 return Ok(cliente);
             }

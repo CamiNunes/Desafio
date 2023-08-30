@@ -17,11 +17,11 @@ namespace curd_clientes.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get(Guid id)
         {
             try
             {
-                var logradouros = _logradouroService.ObterTodosLogradouros();
+                var logradouros = _logradouroService.ObterTodosLogradouros(id);
                 return Ok(logradouros);
             }
             catch (Exception ex)
@@ -31,11 +31,11 @@ namespace curd_clientes.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult Get(Guid id)
+        public IActionResult Get(Guid id, Guid logradouroId)
         {
             try
             {
-                var logradouro = _logradouroService.ObterLogradouroPorId(id);
+                var logradouro = _logradouroService.ObterLogradouroPorId(id, logradouroId);
                 if (logradouro == null)
                     return NotFound();
 
@@ -54,7 +54,7 @@ namespace curd_clientes.API.Controllers
             try
             {
                 _logradouroService.CriarLogradouro(logradouro);
-                return CreatedAtAction(nameof(Post), new { id = logradouro.LogradouroId }, logradouro);
+                return CreatedAtAction(nameof(Get), new { id = logradouro.LogradouroId }, logradouro);
             }
             catch (Exception ex)
             {
@@ -67,8 +67,6 @@ namespace curd_clientes.API.Controllers
         {
             try
             {
-                logradouro.LogradouroId = logradouroId;
-                logradouro.ClienteId = id;
                 _logradouroService.AtualizarLogradouro(logradouro);
                 return Ok(logradouro);
             }
@@ -78,13 +76,13 @@ namespace curd_clientes.API.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}/{logradouroId}")]
         public IActionResult Delete(Guid id, Guid logradouroId)
         {
             try
             {
                 _logradouroService.DeletarLogradouro(id, logradouroId);
-                return Ok("Cliente deletado com sucesso.");
+                return Ok("Endereço deletado com sucesso.");
             }
             catch (Exception ex)
             {

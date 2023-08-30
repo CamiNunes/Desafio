@@ -74,15 +74,28 @@ namespace crud_clientes.Infra.Repositories
         {
             using (IDbConnection connection = new SqlConnection(_connection))
             {
-                var clienteFormatado = new Cliente()
+                try
                 {
-                    ClienteId = cliente.ClienteId,
-                    Nome = cliente.Nome,
-                    Email = cliente.Email,
-                    Logotipo = cliente.Logotipo,
-                };
+                    var clienteFormatado = new Cliente()
+                    {
+                        ClienteId = cliente.ClienteId,
+                        Nome = cliente.Nome,
+                        Email = cliente.Email,
+                        Logotipo = cliente.Logotipo,
+                    };
 
-                await connection.ExecuteAsync("UpdateCliente", clienteFormatado, commandType: CommandType.StoredProcedure);
+                    await connection.ExecuteAsync("UpdateCliente", new
+                    {
+                        ClienteId = clienteFormatado.ClienteId,
+                        Nome = clienteFormatado.Nome,
+                        Email = clienteFormatado.Email,
+                        Logotipo = clienteFormatado.Logotipo
+                    }, commandType: CommandType.StoredProcedure);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
             }
         }
 

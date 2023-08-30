@@ -9,8 +9,8 @@ namespace crud_clientes.Domain.Interfaces.Repositories
 {
     public interface ILogradouroRepository
     {
-        Task<IEnumerable<Logradouro>> ObterTodosAsync();
-        Task<Logradouro> ObterPorIdAsync(Guid id);
+        Task<IEnumerable<Logradouro>> ObterTodosLogradourosAsync(Guid id);
+        Task<Logradouro> ObterPorIdAsync(Guid id, Guid logradouroId);
         Task InserirAsync(Logradouro logradouro);
         Task AtualizarAsync(Logradouro logradouro);
         Task ExcluirAsync(Guid id, Guid logradouroId);

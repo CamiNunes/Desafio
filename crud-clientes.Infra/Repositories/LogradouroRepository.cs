@@ -22,19 +22,19 @@ namespace crud_clientes.Infra.Repositories
             _connection = configuration.GetConnectionString("DefaultConnection");
         }
 
-        public async Task<IEnumerable<Logradouro>> ObterTodosAsync()
+        public async Task<IEnumerable<Logradouro>> ObterTodosLogradourosAsync(Guid id)
         {
             using (IDbConnection connection = new SqlConnection(_connection))
             {
-                return connection.Query<Logradouro>("SELECT * FROM logradouros");
+                return connection.Query<Logradouro>("SELECT * FROM logradouros WHERE ClienteId = @Id", new { Id = id });
             }
         }
 
-        public async Task<Logradouro> ObterPorIdAsync(Guid id)
+        public async Task<Logradouro> ObterPorIdAsync(Guid id, Guid logradouroId)
         {
             using (IDbConnection connection = new SqlConnection(_connection))
             {
-                return connection.QueryFirstOrDefault<Logradouro>("SELECT * FROM logradouros WHERE ClienteId = @Id", new { Id = id });
+                return connection.QueryFirstOrDefault<Logradouro>("SELECT * FROM logradouros WHERE ClienteId = @Id AND LogradouroId = @LogradouroId", new { Id = id, LogradouroId = logradouroId });
             }
         }
 
