@@ -68,7 +68,7 @@ namespace curd_clientes.API.Controllers
             try
             {
                 _logradouroService.AtualizarLogradouro(logradouro);
-                return Ok(logradouro);
+                return Ok("Endereço atualizado com sucesso.");
             }
             catch (Exception ex)
             {

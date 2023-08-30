@@ -74,7 +74,7 @@ namespace curd_clientes.API.Controllers
             try
             {
                 _clienteService.AtualizarCliente(cliente);
-                return Ok(cliente);
+                return Ok("Cliente atualizado com sucesso.");
             }
             catch (Exception ex)
             {
