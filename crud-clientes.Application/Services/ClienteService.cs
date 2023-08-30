@@ -30,18 +30,6 @@ namespace crud_clientes.Application.Services
 
         public async Task CriarCliente(Cliente cliente)
         {
-            var existingCliente = _clienteRepository.GetClienteByEmail(cliente.Email);
-
-            //if (existingCliente.Result != null)
-            //{
-            //    throw new Exception("Um cliente com este endereço de e-mail já está registrado.");
-            //}
-
-            if (_clienteRepository.GetClienteByEmail(cliente.Email) != null)
-            {
-                throw new InvalidOperationException("Um cliente com este email já está registrado.");
-            }
-
             await _clienteRepository.InserirAsync(cliente);
         }
 

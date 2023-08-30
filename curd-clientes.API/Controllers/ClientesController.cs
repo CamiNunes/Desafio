@@ -53,8 +53,14 @@ namespace curd_clientes.API.Controllers
         {
             try
             {
-                _clienteService.CriarCliente(cliente);
-                return CreatedAtAction(nameof(Post), new { id = cliente.ClienteId }, cliente);
+                var novoCliente = _clienteService.CriarCliente(cliente);
+                if (novoCliente.Exception == null)
+                {
+                    return CreatedAtAction(nameof(Post), new { id = cliente.ClienteId }, cliente);
+                }
+
+                return Ok(novoCliente.Exception.InnerException.Message); ;
+                
             }
             catch (Exception ex)
             {

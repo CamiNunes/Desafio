@@ -43,7 +43,8 @@ namespace crud_clientes.Infra.Repositories
             using (IDbConnection connection = new SqlConnection(_connection))
             {
                 const string sql = "SELECT * FROM Clientes WHERE Email = @Email";
-                return connection.QueryFirstOrDefault<Cliente>(sql, new { Email = email });
+                var result = connection.QueryFirstOrDefault<Cliente>(sql, new { Email = email });
+                return result;
             }
         }
 
@@ -51,7 +52,7 @@ namespace crud_clientes.Infra.Repositories
         {
             using (IDbConnection connection = new SqlConnection(_connection))
             {
-                try
+                if (GetClienteByEmail(cliente.Email).Result == null)
                 {
                     var clienteFormatado = new Cliente()
                     {
@@ -61,12 +62,10 @@ namespace crud_clientes.Infra.Repositories
                     };
 
                     await connection.ExecuteAsync("InsertCliente", clienteFormatado, commandType: CommandType.StoredProcedure);
-                }
-                catch (Exception ex)
+                }else
                 {
-                    Console.WriteLine(ex.ToString());
-                }
-
+                    throw new InvalidOperationException("Um cliente com este email já está registrado.");
+                }   
             }
         }
 
