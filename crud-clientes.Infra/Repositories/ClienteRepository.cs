@@ -52,20 +52,28 @@ namespace crud_clientes.Infra.Repositories
         {
             using (IDbConnection connection = new SqlConnection(_connection))
             {
-                if (GetClienteByEmail(cliente.Email).Result == null)
+                try
                 {
-                    var clienteFormatado = new Cliente()
+                    if (GetClienteByEmail(cliente.Email).Result == null)
                     {
-                        Nome = cliente.Nome,
-                        Email = cliente.Email,
-                        Logotipo = cliente.Logotipo,
-                    };
+                        var clienteFormatado = new Cliente()
+                        {
+                            Nome = cliente.Nome,
+                            Email = cliente.Email,
+                            Logotipo = cliente.Logotipo,
+                        };
 
-                    await connection.ExecuteAsync("InsertCliente", clienteFormatado, commandType: CommandType.StoredProcedure);
-                }else
+                        await connection.ExecuteAsync("InsertCliente", clienteFormatado, commandType: CommandType.StoredProcedure);
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("O email: " + cliente.Email + " já está sendo usado.");
+                    }
+                }
+                catch (Exception ex)
                 {
-                    throw new InvalidOperationException("O email: " + cliente.Email + " já está sendo usado.");
-                }   
+                    Console.WriteLine(ex.ToString());
+                }
             }
         }
 
