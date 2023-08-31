@@ -57,7 +57,7 @@ namespace curd_clientes.API.Controllers
                 if (novoCliente.Exception == null)
                 {
                     //return CreatedAtAction(nameof(Post), new { id = cliente.ClienteId }, cliente);
-                    return Ok(new { message = "Cliente cadastrado com sucesso!" });
+                    return BadRequest(new { message = "Cliente cadastrado com sucesso!" });
                 }
 
                 return Ok(new { message = novoCliente.Exception.InnerException.Message });

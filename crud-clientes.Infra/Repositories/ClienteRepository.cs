@@ -64,7 +64,7 @@ namespace crud_clientes.Infra.Repositories
                     await connection.ExecuteAsync("InsertCliente", clienteFormatado, commandType: CommandType.StoredProcedure);
                 }else
                 {
-                    throw new InvalidOperationException("Um cliente com este email já está registrado.");
+                    throw new InvalidOperationException("O email: " + cliente.Email + " já está sendo usado.");
                 }   
             }
         }
