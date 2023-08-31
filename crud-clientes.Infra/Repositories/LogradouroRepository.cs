@@ -47,6 +47,7 @@ namespace crud_clientes.Infra.Repositories
                     var logradouroFormatado = new Logradouro()
                     {
                         ClienteId = logradouro.ClienteId,
+                        Cep = logradouro.Cep.Replace(".", "").Replace("-",""),
                         Tipo = logradouro.Tipo,
                         Endereco = logradouro.Endereco,
                         Numero = logradouro.Numero,
@@ -62,7 +63,6 @@ namespace crud_clientes.Infra.Repositories
                 {
                     Console.WriteLine(ex.ToString());
                 }
-
             }
         }
 
@@ -76,6 +76,7 @@ namespace crud_clientes.Infra.Repositories
                     {
                         LogradouroId = logradouro.LogradouroId,
                         ClienteId = logradouro.ClienteId,
+                        Cep = logradouro.Cep.Replace(".", "").Replace("-", ""),
                         Tipo = logradouro.Tipo,
                         Endereco = logradouro.Endereco,
                         Numero = logradouro.Numero,
@@ -87,6 +88,7 @@ namespace crud_clientes.Infra.Repositories
 
                     await connection.ExecuteAsync("UpdateLogradouro", new { ClienteId = logradouroFormatado.ClienteId, 
                                                                             LogradouroId = logradouroFormatado.LogradouroId, 
+                                                                            Cep = logradouroFormatado.Cep,
                                                                             Tipo = logradouroFormatado.Tipo,
                                                                             Endereco = logradouroFormatado.Endereco,
                                                                             Numero = logradouroFormatado.Numero,

@@ -10,6 +10,7 @@ namespace crud_clientes.Domain.Entities
     {
         public Guid LogradouroId { get; set; }
         public Guid ClienteId { get; set; }
+        public string Cep { get; set; }
         public string Tipo { get; set; }
         public string Endereco { get; set; }
         public string Numero { get; set; }

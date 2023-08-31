@@ -16,7 +16,7 @@ namespace curd_clientes.API.Controllers
             _logradouroService = logradouroService;
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {
             try
@@ -30,7 +30,7 @@ namespace curd_clientes.API.Controllers
             }
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}/{logradouroId}")]
         public IActionResult Get(Guid id, Guid logradouroId)
         {
             try
@@ -67,6 +67,8 @@ namespace curd_clientes.API.Controllers
         {
             try
             {
+                logradouro.ClienteId = id;
+                logradouro.LogradouroId = logradouroId;
                 _logradouroService.AtualizarLogradouro(logradouro);
                 return Ok("Endereço atualizado com sucesso.");
             }
